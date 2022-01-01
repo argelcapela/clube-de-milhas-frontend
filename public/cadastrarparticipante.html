@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Milhas</title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+          <div class="form-group">
+          <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome Completo"><br>
+          <input type="text" id="email" class="form-control" placeholder="Seu melhor E-mail"><br>
+          <input type="password" id="senha" class="form-control" placeholder="Sua senha de acesso"><br>
+          <button id="signin-button" class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+  function cadastrar()
+{
+  // pega os valores
+	  const n = document.getElementById("nomeCompleto").value;
+		const e = document.getElementById("email").value;
+		const s = document.getElementById("senha").value;
+  // valida os campos no cliente
+    if (n == '' || e == '' || s == '')
+    {
+      alert("Por favor preencha todos os campos corretamente!");
+      return;
+    }
+
+  // se tudo estiver de buenas, cadastra
+        var http = new XMLHttpRequest();
+        http.open("POST","http://localhost:3000/post",true);
+        http.setRequestHeader("Content-type","application/json; charset=utf-8");
+        http.onreadystatechange=function(){
+
+            if(this.readyState == 4 && this.status == 200)
+            {
+                alert("Cadastro realizado com sucesso!");
+                console.log(this.responseText);
+            }
+        }
+
+        var json_bruto = {nomeCompleto:n, email:e,senha:s};
+        var json = JSON.stringify(json_bruto);
+        http.send(json);
+    // limpa todos os campos
+    n.value = "";
+    e.value = "";
+    s.value = "";
+}
+</script>
+</html>
