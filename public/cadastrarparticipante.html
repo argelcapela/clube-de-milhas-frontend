@@ -39,9 +39,9 @@
   function cadastrar()
 {
   // pega os valores
-	  const n = document.getElementById("nomeCompleto").value;
-		const e = document.getElementById("email").value;
-		const s = document.getElementById("senha").value;
+	  const n = document.getElementById("nomeCompleto");
+		const e = document.getElementById("email");
+		const s = document.getElementById("senha");
   // valida os campos no cliente
     if (n == '' || e == '' || s == '')
     {
@@ -61,16 +61,17 @@
             {
               document.getElementById("cadastrar-form").style.display="none";
               document.getElementById("sucesso").style.display="block";
+              // limpa todos os campos
+            n.value = "";
+            e.value = "";
+            s.value = "";
             }
         }
 
-        var json_bruto = {nomeCompleto:n, email:e,senha:s};
+        var json_bruto = {nomeCompleto:n.value, email:e.value, senha:s.value};
         var json = JSON.stringify(json_bruto);
         http.send(json);
-    // limpa todos os campos
-    n.value = "";
-    e.value = "";
-    s.value = "";
+
 
 }
 
