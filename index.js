@@ -30,4 +30,4 @@ http.createServer((req, res) => {
             res.end(content)
         }
     )
-}).listen(process.env.PORT, () => console.log('Server is running'))
+}).listen(5000 || process.env.PORT, () => console.log('Server is running'))
