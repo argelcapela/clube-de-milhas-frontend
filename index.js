@@ -13,6 +13,8 @@ http.createServer((req, res) => {
         file = 'consultarmilhas.html';
     else if(req.url === '/cadastrarmilhas')
         file = 'cadastrarmilhas.html';
+    else
+        file = 'erro.html';
 
     const filePath = path.join(__dirname, 'public', file)
     const extname = path.extname(filePath)
