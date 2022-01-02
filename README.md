@@ -96,7 +96,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
         <img src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-14.jpg" width="100px;" alt="Foto de Argel Capela!"/><br>
         <sub>
           <b>Gabriel Ramos</b><br>
-          <i>Programador Frontend & Backend</i>
+          <i>Milhas & Wix Editor</i>
         </sub>
       </a>
     </td>
@@ -105,7 +105,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
         <img src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-14.jpg" width="100px;" alt="Foto de Argel Capela!"/><br>
         <sub>
           <b>Júlia</b><br>
-          <i>Programador Frontend & Backend</i>
+          <i>Design & Redes Sociais</i>
         </sub>
       </a>
     </td>
