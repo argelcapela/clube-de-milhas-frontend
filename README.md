@@ -15,6 +15,9 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 ## :wrench: Tecnologias utilizadas:<br>
 <div style="display: inline_block">
     <img align="center" alt="gel-Js" height="30" width="100" src="https://w7.pngwing.com/pngs/935/117/png-transparent-wix-com-website-builder-web-hosting-service-web-design-web-design-text-hand-logo.png">
+    <img align="center" alt="gel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+    <img align="center" alt="gel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+    <img align="center" alt="gel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
     <img align="center" alt="gel-Js" height="100" width="200" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain-wordmark.svg">
 
 </div>
@@ -46,7 +49,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 
 ## :soon: Implementação futura:<br>
     
-<li>Nada em mente por enquanto.</li>
+<li>Mensalmente ou a cada 2 meses, o comite de atividades irá reunir-se para sugerir implementações no sistema para oferecer um serviço cada vez melhor para a Igreja.</li>
     
 </div>
 <div class="col-12">
