@@ -9,7 +9,8 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style>
 
-  .btn-success {background:blue;}
+  .btn-success,.btn-success:hover,.btn-success:active, .btn-success:visited {background:blue;}
+
   #milhas-a-receber{color: rgb(18, 182, 67);}
   #qtd-amigos,#tarefas,option{background:#ccc;}
   #mensagem{
@@ -41,6 +42,9 @@
        <div id="cadastrar-milhas" class="container-fluid mt-3" style="display:none;">
         <div class="row">
           <div class="form-group">
+          <h3 id="welcome"></h3>
+          <br>
+          <br>
           <select id="tarefas" class="form-control" onchange="calcularTotalMilhas()">
             <option value="0">Qual taréfa você realizou para ganhar milhas?</option>
           </select>
@@ -51,9 +55,6 @@
           <label for="amigos" >Trouxe algum amigo com você ?</label>
           <select id="qtd-amigos" name="qtd-amigos" class="form-control" onchange="calcularTotalMilhas()">
             <option value="1">Nenhum</option>
-            <option value="2">1</option>
-            <option value="3">2</option>
-            <option value="4">Mais de 2 amigos</option>
           </select>
           <br>
           <textarea class="form-control" id="contato-amigos" cols="15" rows="5" maxlength="100" onclick="this.innerHTML='';" style="display:none;">Por favor, digite o nome de seus amigos : número de what'sApp! Pedimos esses dados somente para parabenizá-los por participar de uma atividade!
@@ -65,9 +66,11 @@
           <h2>Milhas a receber</h2>
           <hr>
           <h3 id="milhas-a-receber">M$ 0 milhas</h3>
-
+          <br>
+          <br>
           <div class="row d-flex justify-content-center">
             <div class="col-md-3 text-center">
+
               <button id="signin-button" class="btn btn-success" onclick="cadastrarMilha()">Cadastrar Milhas</button>
               <button id="signin-button" class="btn btn-danger" onclick="cancelar()">Cancelar</button>
 
@@ -78,8 +81,11 @@
         </div>
       </div>
 
-      <div id="mensagem" style="display:none;">
+      <div id="mensagem" style="display:none;" class="text-center">
+        <br>
         <h1 id="msg">Cadastro realizado com sucesso</h1>
+        <br>
+        <br>
         <button type='button' class='btn btn-success' onclick="ok()">Beleza!</button>
       </div>
 
@@ -102,6 +108,25 @@ function calcularTotalMilhas()
   document.getElementById("milhas-a-receber").innerHTML = "M$ " + total + " milhas";
 }
 
+function limparCampos()
+{
+  document.getElementById("email").value="";
+  document.getElementById("senha").value="";
+  document.getElementById("qtd-amigos").selectedIndex=0;
+  document.getElementById("tarefas").selectedIndex=0;
+  document.getElementById("comentario").value = "";
+  document.getElementById("");
+
+
+
+}
+
+function cancelar()
+{
+  documnet.getElementById("cadastrar-milhas").style.display="none";
+  documnet.getElementById("login").style.display="block";
+  limparCampos();
+}
 
 function ok(){
   document.getElementById("mensagem").style.display="none";
@@ -111,7 +136,7 @@ function ok(){
 
 
 //prepara o combo tarefas
-const res = fetch("https://clube-de-milhas-backend.herokuapp.com/consultartarefas").then((data) => data.json())
+var res = fetch("https://clube-de-milhas-backend.herokuapp.com/consultartarefas").then((data) => data.json())
 var tarefas = document.getElementById("tarefas");
 res.then(function(result)
 {
@@ -120,6 +145,17 @@ res.then(function(result)
   html += "<option value='"+result[i][1]+"''>"+result[i][0]+"</option>";
   }
   tarefas.innerHTML += html;
+})
+//prepara o combo qtd amigos
+res = fetch("https://clube-de-milhas-backend.herokuapp.com/consultarmultiplicadores").then((data) => data.json())
+var qtd_amigos = document.getElementById("qtd-amigos");
+res.then(function(result)
+{
+  var html = "";
+  for(var i = 1; i < result.length;i++){
+  html += "<option value='"+result[i][1]+"''>"+result[i][0]+"</option>";
+  }
+  qtd_amigos.innerHTML += html;
 })
 
 
@@ -167,6 +203,7 @@ function login()
         // transição
         document.getElementById("login").style.display="none";
         document.getElementById("cadastrar-milhas").style.display="block";
+        document.getElementById("welcome").innerHTML = "Olá, " + nomeCompleto + " parabéns por estar trabalhando no Clube de Milhas, por favor digite corretamente as informações abaixo e ganhe milhas tops!"
       }
       else
       {
@@ -223,6 +260,9 @@ function cadastrarMilha()
             {
               document.getElementById("cadastrar-milhas").style.display="none";
               mensagem("Parabéns suas milhas foram cadastradas com sucesso! Siga firme amigo, logo logo, estará adquirindo items, super legais em nosso Clube! Deus te abencoe!");
+              document.getElementById("email").value="";
+              document.getElementById("senha").value="";
+
               setTimeout(function(){
                 document.getElementById("login").style.display="block";
               },2000);

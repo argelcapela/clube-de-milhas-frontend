@@ -13,6 +13,8 @@ http.createServer((req, res) => {
         file = 'consultarmilhas.html';
     else if(req.url === '/consultartarefas')
         file = 'consultartarefas.html';
+    else if(req.url === '/consultarmultiplicadores')
+        file = 'consultarmultiplicadores.html';
     else if(req.url === '/cadastrarmilhas')
         file = 'cadastrarmilhas.html';
     else
