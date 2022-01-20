@@ -34,16 +34,16 @@
     <div id="cadastrar-form" class="container-fluid mt-3">
         <div class="row">
           <div class="form-group">
-          <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome Completo"><br>
-          <input type="text" id="email" class="form-control" placeholder="Seu melhor E-mail"><br>
-          <input type="password" id="senha" class="form-control" placeholder="Sua senha de acesso"><br>
+          <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome Completo" maxlength="15" tabindex="1"><br>
+          <input type="text" id="email" class="form-control" placeholder="Seu melhor E-mail" maxlength="20" tabindex="2"><br>
+          <input type="password" id="senha" class="form-control" placeholder="Sua senha de acesso" maxlength="8" tabindex="3"><br>
           <button id="signin-button" class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
           </div>
         </div>
       </div>
       <div id="sucesso" style="display:none;">
         <h1>Cadastro realizado com sucesso</h1>
-        <button type='button' class='btn btn-success' onclick="beleza()">Beleza!</button>
+        <button type='button' class='btn btn-success' onclick="beleza()">OK</button>
       </div>
 
     </div>
@@ -98,6 +98,11 @@ function mensagem(msg)
   {
     document.getElementById("mensagem").style.display="block";
     document.getElementById("msg").innerHTML = msg;
+
+    // tempo de mostrar imagem
+    setTimeout(function(){
+      ok();
+    }, 2000)
   }
 
   function ok(){
