@@ -12,7 +12,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 
 <div class="col-12">
 
-## :wrench: Tecnologias utilizadas:<br>
+## 🔧 Tecnologias utilizadas:<br>
 <div style="display: inline_block">
     <img align="center" alt="gel-Js" height="30" width="100" src="https://w7.pngwing.com/pngs/935/117/png-transparent-wix-com-website-builder-web-hosting-service-web-design-web-design-text-hand-logo.png">
     <img align="center" alt="gel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -24,7 +24,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 
 <div class="col-12">
     
-## :books: Funcionalidades:<br>
+## 📔 Funcionalidades:<br>
 <table class="special-border">
 <tr>
     <td colspan="2">CRUD Google Planilhas!</td>
@@ -35,7 +35,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 
 <div class="col-12">
 
-## :rocket: Rodando o projeto:<br>
+## 🚀 Rodando o projeto:<br>
 <li>Link Oficial Wix: <a href="https://clubedemilhas.wixsite.com/website">Link</a></li>
 <li>Link Consultar Milhas: <a href="https://clube-de-milhas-frontend.herokuapp.com/consultarmilhas">Link</a></li>
 <li>Link Cadastrar Participante: <a href="https://clube-de-milhas-frontend.herokuapp.com/cadastrarparticipante">Link</a></li>
@@ -47,7 +47,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 </div>
 <div class="col-12">
 
-## :soon: Implementação futura:<br>
+## 💡 Implementação futura:<br>
     
 <li>Mensalmente ou a cada 2 meses, o comite de atividades irá reunir-se para sugerir implementações no sistema para oferecer um serviço cada vez melhor para a Igreja.</li>
     
@@ -55,7 +55,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 <div class="col-12">
     
 
-## :handshake: Colaboradores:<br>
+## 🤝 Colaboradores:<br>
 <table>
   <tr>
     <td align="center">
@@ -117,7 +117,7 @@ O Club de Milhas é uma plataforma que permite aos membros de A Igreja de Jesus 
 </div>
 <div class="col-12">
     
-## :dart: Status do projeto:<br>
+## 📅 Status do projeto:<br>
 
 <li>Em desenvolvimento.</li>
     
